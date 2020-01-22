@@ -3,7 +3,24 @@
 import sys
 
 def rock_paper_scissors(n):
-  pass 
+    a = 'rock'
+    b = 'paper'
+    c = 'scissors'
+
+    
+
+    choices = [a, b, c]
+    final = []
+
+    if n == 1:
+        for i in choices:
+            final.append([i])
+    else:
+        for i in choices:
+            final.append([i])
+    
+    return final
+    
 
 
 if __name__ == "__main__":
