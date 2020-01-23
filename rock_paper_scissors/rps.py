@@ -12,12 +12,22 @@ def rock_paper_scissors(n):
     choices = [a, b, c]
     final = []
 
-    if n == 1:
+    if n == 0:
+        return [[]]
+    elif n == 1:
         for i in choices:
             final.append([i])
-    else:
+    elif n == 2:
         for i in choices:
-            final.append([i])
+            for j in choices:
+                final.append([[i], [j]])
+    elif n == 3: 
+        for i in choices:
+            for j in choices:
+                for k in choices:
+                    final.append([[i], [j], [k]])
+    else: 
+        return rock_paper_scissors(n-3) + rock_paper_scissors(n-2) + rock_paper_scissors(n-1)
     
     return final
     
